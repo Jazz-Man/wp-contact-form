@@ -1,0 +1,37 @@
+{
+    "name": "jazzman/wp-contact-form",
+    "license": "MIT",
+    "type": "wordpress-plugin",
+    "description": "Just another contact form plugin. Simple but flexible",
+    "authors": [
+        {
+            "name": "Vasyl Sokolik",
+            "email": "vsokolyk@gmail.com"
+        }
+    ],
+    "config": {
+        "sort-packages": true,
+        "preferred-install": "dist",
+        "optimize-autoloader": true,
+        "classmap-authoritative": true,
+        "apcu-autoloader": true
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "require": {
+        "php": ">=7.2",
+        "composer/installers": "^1"
+    },
+    "extra": {
+        "installer-paths": {
+            "vendor/wp/wp-content/mu-plugins/{$name}/": ["type:wordpress-muplugin"],
+            "vendor/wp/wp-content/plugins/{$name}/": ["type:wordpress-plugin"],
+            "vendor/wp/wp-content/themes/{$name}/": ["type:wordpress-theme"]
+        },
+        "wordpress-install-dir": "vendor/wp"
+    },
+    "require-dev": {
+        "roave/security-advisories": "dev-master",
+        "roots/wordpress": "^5.3"
+    }
+}
